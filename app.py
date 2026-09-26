@@ -19,10 +19,10 @@ st.set_page_config(
 
 import glob
 
-csv_files = glob.glob("/content/*.csv")
+csv_files = glob.glob("*.csv")
 
 if not csv_files:
-    st.error("CSV file not found. Please upload the dataset to Colab.")
+    st.error("CSV file not found in the repository.")
     st.stop()
 
 df = pd.read_csv(csv_files[0])
